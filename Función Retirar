@@ -1,0 +1,14 @@
+struct Cuenta retirar(struct Cuenta cuenta) {
+    float cantidad;
+    printf("\nIngrese la cantidad a retirar: ");
+    scanf("%f", &cantidad);
+    if (cantidad <= 0) {
+        printf("Cantidad no válida. Deja de perder el tiempo.\n");
+    } else if (cantidad > cuenta.saldo) {
+        printf("Fondos insuficientes.\n");
+    } else {
+        cuenta.saldo -= cantidad;
+        printf("Retiro exitoso. Tu nuevo saldo es %.2f\n", cuenta.saldo);
+    }
+    return cuenta;
+}
