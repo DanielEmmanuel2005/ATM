@@ -19,18 +19,27 @@ void consultarSaldo(struct Cuenta cuenta) {
 
 struct Cuenta retirar(struct Cuenta cuenta) {
     float cantidad;
+    int Confirmacion;
     printf("\nIngrese la cantidad a retirar: ");
     scanf("%f", &cantidad);
+
     if (cantidad <= 0) {
         printf("Cantidad no válida. Deja de perder el tiempo.\n");
     } else if (cantidad > cuenta.saldo) {
         printf("Fondos insuficientes.\n");
     } else {
+        printf("¿Confirmar retiro? 1.Si 2.no\n");
+        scanf("%i",Confirmacion);
+        if (Confirmacion==1){
         cuenta.saldo -= cantidad;
         printf("Retiro exitoso. Tu nuevo saldo es %.2f\n", cuenta.saldo);
-    }
+        return cuenta;
+        }else{
+        printf("Retiro Cancelado");
     return cuenta;
-}
+    }
+    }
+    }
 
 struct Cuenta depositar(struct Cuenta cuenta) {
     float cantidad;
