@@ -1,13 +1,33 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+
 struct Cliente 
 {
     int NoCliente;
     float Saldo;
     char Nombre[40];
     int NIP;
+    int Movimientos[10];
 };
+void Registrar_Cuenta(struct Cliente *cliente) 
+{
+    printf("Ingrese el nombre de su cuenta: ");
+    fgets(cliente->Nombre, sizeof(cliente->Nombre), stdin);
+    cliente->Nombre[strcspn(cliente->Nombre, "\n")] = '\0';
+
+    printf("Ingrese el NIP de la cuenta: ");
+    scanf("%d", &cliente->NIP);
+
+    cliente->Saldo = 0.0; 
+    cliente->NoCliente = 1;
+
+    printf("Cuenta creada correctamente.\n");
+    printf("Los Datos de tu Cuenta son los siguientes\n\n");
+    printf("Nombre: %s\n", cliente->Nombre);
+    printf("NIP: %d\n", cliente->NIP);
+    printf("Saldo: %.2f\n", cliente->Saldo);
+}
 void MostrarSaldo(struct Cliente cliente)
 {
     printf("Saldo de cuenta #%d (%s): %.2f\n", cliente.NoCliente, cliente.Nombre, cliente.Saldo);
@@ -53,125 +73,42 @@ int Retirar(float cantidad, float saldo)
         return 101;
     }
 }
-
 int main()
 {
-    int Usuario;
-    int Num_intentos = 0;
-    int Clave = 1234;
-
-    struct Cliente clientes[3] = {
-        {1, 1000.0, "Juan", 1234},
-        {2, 2000.0, "Fernando", 1234},
-        {3, 3000.0, "Pepe", 1234}
-    };
-    do
-    {
-        if (Num_intentos < 3)
-        {
-            printf("\n\n\t\t\t----Bienvenido al Cajero Automatico---\n\n");
-            printf("Para ingresar a tu cuenta, ingrese su clave de 4 digitos.\n\nClave: ");
-            scanf("%d", &Usuario);
-            Num_intentos++;
-        }
-        else
-        {
-            printf("Demasiados intentos fallidos. Cerrando programa.\n");
-            exit(1);
-        }
-    } while (Usuario != Clave);
-
-    printf("\n\n\n\t\t\t\tContrasena Correcta\n");
-
+    struct Cliente clientes[3];
     int Opcion, opcion1;
     float Cantidad;
 
     do
     {
         printf("\n\n\t\t\t----Menu del Cajero Automatico---\n\n");
-        printf("1. Consultar Saldo\n");
-        printf("2. Depositar Dinero\n");
-        printf("3. Retirar Dinero\n");
-        printf("4. Salir\n");
+        printf("1. Registrar Cliente\n");
+        printf("2. Busqueda de cuenta\n");
+        printf("3. Iniciar Sesion de una cuenta\n")
+        printf("4. Depositar\n");
+        printf("5. Guardar o Exportar\n")
+        printf("6. Salir\n");
         printf("Seleccione una de las opciones: ");
         scanf("%d", &Opcion);
 
     switch (Opcion)
     {
         case 1:
-        printf("\n\n\t\t\t----Que cuenta quieres usar?---\n\n");
-        for (int i = 0; i < 3; i++)
-        {
-            printf("%d. Cuenta #%d - %s\n", i + 1, clientes[i].NoCliente, clientes[i].Nombre);
-        }
-        printf("Seleccione una de las opciones: ");
-        scanf("%d", &opcion1);
-
-        if (opcion1 >= 1 && opcion1 <= 3)
-        {
-            MostrarSaldo(clientes[opcion1 - 1]);
-        }
-        else
-        {
-            printf("Opcion de cuenta inválida.\n");
-        }
-        break;
-
+            Registrar_Cuenta();
+            break;
         case 2:
-        printf("\n\n\t\t\t----Que cuenta quieres usar?---\n\n");
-        for (int i = 0; i < 3; i++)
-        {
-            printf("%d. Cuenta #%d - %s\n", i + 1, clientes[i].NoCliente, clientes[i].Nombre);
-        }
-        printf("Seleccione una de las opciones: ");
-        scanf("%d", &opcion1);
-
-        if (opcion1 >= 1 && opcion1 <= 3)
-        {
-            struct Cliente *cliente = &clientes[opcion1 - 1];
-            MostrarSaldo(*cliente);
-            printf("\nCuanto dinero quieres depositar?\nDeposito: ");
-            scanf("%f", &Cantidad);
-            if (Depositar(Cantidad) == 1)
-            {
-                cliente->Saldo += Cantidad;
-            }
-        }
-        else
-        {
-            printf("Opcion de cuenta invalida.\n");
-        }
-        break;
-
+            //Funcion Busqueda de cuenta
+            break;
         case 3:
-        printf("\n\n\t\t\t----Que cuenta quieres usar?---\n\n");
-        for (int i = 0; i < 3; i++)
-        {
-            printf("%d. Cuenta #%d - %s\n", i + 1, clientes[i].NoCliente, clientes[i].Nombre);
-        }
-        printf("Seleccione una de las opciones: ");
-        scanf("%d", &opcion1);
-
-        if (opcion1 >= 1 && opcion1 <= 3)
-        {
-            struct Cliente *cliente = &clientes[opcion1 - 1];
-            MostrarSaldo(*cliente);
-            printf("\nCuanto dinero quieres retirar?\nRetiro: ");
-            scanf("%f", &Cantidad);
-            if (Retirar(Cantidad, cliente->Saldo) == 1)
-            {
-                cliente->Saldo -= Cantidad;
-            }
-        }else
-        {
-            printf("Opcion de cuenta invalida.\n");
-        }
-        break;
+            //Inicio de sesion
+            break;
 
         case 4:
-        printf("Saliendo del sistema...\n");
-        break;
-
+            //Depositar
+            break;
+        case 5:
+            //Funcion de guardar y exportar
+        case 6:
         default:
         printf("Esa opcion no está disponible.\n");
     }
@@ -180,3 +117,5 @@ int main()
     system("pause");
     return 0;
 }
+
+
