@@ -1,0 +1,107 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+struct Cuenta {
+    float saldo;
+};
+
+int valida(float cantidad) {
+    if (cantidad <= 0) {
+        printf("No se puede hacer el deposito.\n");
+        return 0;
+    }
+    return 1;
+}
+
+void consultarSaldo(struct Cuenta cuenta) {
+    printf("\nTu saldo actual es: %.2f\n", cuenta.saldo);
+}
+
+struct Cuenta retirar(struct Cuenta cuenta) {
+    float cantidad;
+    printf("\nIngrese la cantidad a retirar: ");
+    scanf("%f", &cantidad);
+    if (cantidad <= 0) {
+        printf("Cantidad no válida. Deja de perder el tiempo.\n");
+    } else if (cantidad > cuenta.saldo) {
+        printf("Fondos insuficientes.\n");
+    } else {
+        cuenta.saldo -= cantidad;
+        printf("Retiro exitoso. Tu nuevo saldo es %.2f\n", cuenta.saldo);
+    }
+    return cuenta;
+}
+
+struct Cuenta depositar(struct Cuenta cuenta) {
+    float cantidad;
+    printf("\nIngrese la cantidad a depositar: ");
+    scanf("%f", &cantidad);
+    if (valida(cantidad)) {
+        cuenta.saldo += cantidad;
+        printf("Depósito exitoso. Nuevo saldo: %.2f\n", cuenta.saldo);
+    }
+    return cuenta;
+}
+
+int main() {
+    int numeroCuenta;
+    int opciones;
+    float cantidad;
+
+
+    struct Cuenta cuentas[3] = {
+        {1000},  // Cuenta 1
+        {2000},  // Cuenta 2
+        {3000}   // Cuenta 3
+    };
+
+    printf("Elije tu cuenta\n");
+    printf("cuenta 1\n");
+    printf("cuenta 2\n");
+    printf("cuenta 3\n");
+    scanf("%d", &numeroCuenta);
+
+
+    if (numeroCuenta < 1 || numeroCuenta > 3) {
+        printf("Cuenta no válida.\n");
+        return 1;
+    }
+
+
+    int indice = numeroCuenta - 1;
+
+    do {
+
+        printf("\n-----Cajero Automatico-----\n");
+        printf("1.-Consulta de saldo\n");
+        printf("2.-Deposito\n");
+        printf("3.-Retiro\n");
+        printf("4.-Salir\n");
+        printf("Selecciona una opcion: ");
+        scanf("%d", &opciones);
+
+        switch(opciones) {
+            case 1:
+                consultarSaldo(cuentas[indice]);
+                break;
+            case 2:
+
+                cuentas[indice] = depositar(cuentas[indice]);
+                break;
+            case 3:
+
+                cuentas[indice] = retirar(cuentas[indice]);
+                break;
+            case 4:
+
+                printf("¡Adios!\n");
+                return 0;
+                break;
+            default:
+                printf("Opción no válida.\n");
+                break;
+        }
+    } while(opciones != 4);
+
+    return 0;
+}
