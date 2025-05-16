@@ -1,2 +1,5 @@
-Guía de in
-Fakin Omar
+Guía de instalación
+
+Guía de usuario
+
+Explicación/Descripción
