@@ -1,7 +1,7 @@
-#Guía de Instalación
-##Requisitos
-*Peso: +9 KB.
-*Programas Necesarios: Cualquier compilador de el lenguaje de programación C.
+# Guía de Instalación
+## Requisitos
+* Peso: +9 KB.
+* Programas Necesarios: Cualquier compilador de el lenguaje de programación C.
 
 Pasos para la instalación:
 1. **Contar con una cuenta de Github**
