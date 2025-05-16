@@ -9,7 +9,7 @@ Una vez que hayas creado la cuenta, te encontraras con la pagina de inicio de Gi
 
 2. En la esquina superior derecha encontraras varios botones, entre ellos encontraras la barra de búsqueda, haces click sobre ella y deberas escribir **“OmarMendez245”** para luego apretar la tecla “enter”.
 Con esto Github te notificara que encontró un usuario con ese nombre.
-
+![Con titulo](pictures/avatar.png "titulo")
 3. Harás click sobre el aviso, lo que te mostrara el usuario **“OmarMendez245”**, haces click sobre el y se te mostrara su pagina de usuario.
 
 4. En la parte inferior habrá un apartado llamado **“Contribution activity”**, en el que buscaras el mes de mayo de el 2025.
