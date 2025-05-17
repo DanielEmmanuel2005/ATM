@@ -154,7 +154,6 @@ float Retirar(struct cliente *clientes) {
                 agregarMovimiento(clientes, -cantidad);
                 (*clientes).Saldo -= cantidad;
                 printf("\nRetiro exitoso. Nuevo saldo: %.2f\n", (*clientes).Saldo);
-                GuardarClientes(clientes, 1); 
             } else {
                 printf("\nRetiro cancelado\n");
             }
@@ -162,7 +161,6 @@ float Retirar(struct cliente *clientes) {
             agregarMovimiento(clientes, -cantidad);
             (*clientes).Saldo -= cantidad;
             printf("Retiro exitoso. Nuevo saldo: %.2f\n", (*clientes).Saldo);
-            GuardarClientes(clientes, 1); 
         }
     }
     return (*clientes).Saldo;
