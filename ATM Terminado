@@ -136,7 +136,6 @@ float Depositar(struct cliente *clientes) {
         agregarMovimiento(clientes, cantidad);
         (*clientes).Saldo += cantidad;
         printf("Depósito exitoso. Nuevo saldo: %.2f\n", (*clientes).Saldo);
-        GuardarClientes(clientes, 1);
     }
     return (*clientes).Saldo;
 }
