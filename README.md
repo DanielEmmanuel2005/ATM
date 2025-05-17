@@ -25,7 +25,7 @@ Con esto Github te notificara que encontró un usuario con ese nombre.
 # Guía de usuario
 
 Al ejecutar el código se mostrará un texto con el nombre del programa junto al menú principal donde puedes seleccionar las siguientes opciones:
-
+![Descripción de la imagen](Imagenes/LoginMenu.jpg)
 **1.-Login :**
 Al seleccionar 1 aparecerá “Introduce ID” donde deberás escribir en NoCliente si este existe pedirá el NIP para comprobar que es tu cuenta, en caso de que el NoCliente y NIP sean incorrectos se regresará al menú principal.
 Al ser correcto tanto el NoCliente y el NIP se presentará un nuevo menú con las siguientes opciones:
