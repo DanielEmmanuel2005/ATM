@@ -15,29 +15,37 @@ struct cliente {
 };
 
 void agregarMovimiento(struct cliente *cliente, float cantidad);
+void GuardarClientes(struct cliente *clientes, int numClientes);
+void IniciarSesion(struct cliente *clientes, int numClientes);
+void Busqueda(struct cliente *clientes, int tamano);
+int valida(float cantidad);
+void ConsultarSaldo(struct cliente cliente);
+float Depositar(struct cliente *clientes);
+float Retirar(struct cliente *clientes);
+void CrearCuenta(struct cliente *clientes, int *numClientes);
+void ConsultarMovimientos(struct cliente cliente);
 
-// Función para guardar los datos de clientes en archivo
 void GuardarClientes(struct cliente *clientes, int numClientes) {
     char usuario[50];
     char contrasena[50];
-    
+
     printf("\n--- Autenticación de Administrador ---\n");
     printf("Usuario: ");
     scanf("%s", usuario);
     printf("Contraseña: ");
     scanf("%s", contrasena);
-    
+
     if (strcmp(usuario, ADMIN_USER) != 0 || strcmp(contrasena, ADMIN_PASS) != 0) {
         printf("Acceso denegado. Credenciales incorrectas.\n");
         return;
     }
-    
+
     FILE *archivo = fopen("clientes.txt", "w");
     if (archivo == NULL) {
         printf("Error al abrir el archivo.\n");
         return;
     }
-    
+
     for (int i = 0; i < numClientes; i++) {
         fprintf(archivo, "NoCliente: %d\n", clientes[i].NoCliente);
         fprintf(archivo, "Nombre: %s\n", clientes[i].Nombre);
@@ -49,10 +57,11 @@ void GuardarClientes(struct cliente *clientes, int numClientes) {
         }
         fprintf(archivo, "\n\n");
     }
-    
+
     fclose(archivo);
     printf("Datos de clientes guardados exitosamente en clientes.txt\n");
 }
+
 void IniciarSesion(struct cliente *clientes, int numClientes) {
     int IDlogin, Niplogin, Consultalogin;
     printf("Introduce ID: ");
@@ -89,6 +98,7 @@ void IniciarSesion(struct cliente *clientes, int numClientes) {
         printf("No existe este usuario.\n");
     }
 }
+
 void Busqueda(struct cliente *clientes, int tamano) {
     char nombre[40];
     printf("Introduce tu nombre: ");
@@ -126,7 +136,7 @@ float Depositar(struct cliente *clientes) {
         agregarMovimiento(clientes, cantidad);
         (*clientes).Saldo += cantidad;
         printf("Depósito exitoso. Nuevo saldo: %.2f\n", (*clientes).Saldo);
-        GuardarClientes(clientes, 1); // Guardar después del movimiento
+        GuardarClientes(clientes, 1);
     }
     return (*clientes).Saldo;
 }
@@ -144,7 +154,7 @@ float Retirar(struct cliente *clientes) {
                 agregarMovimiento(clientes, -cantidad);
                 (*clientes).Saldo -= cantidad;
                 printf("\nRetiro exitoso. Nuevo saldo: %.2f\n", (*clientes).Saldo);
-                GuardarClientes(clientes, 1); // Guardar después del movimiento
+                GuardarClientes(clientes, 1); 
             } else {
                 printf("\nRetiro cancelado\n");
             }
@@ -152,7 +162,7 @@ float Retirar(struct cliente *clientes) {
             agregarMovimiento(clientes, -cantidad);
             (*clientes).Saldo -= cantidad;
             printf("Retiro exitoso. Nuevo saldo: %.2f\n", (*clientes).Saldo);
-            GuardarClientes(clientes, 1); // Guardar después del movimiento
+            GuardarClientes(clientes, 1); 
         }
     }
     return (*clientes).Saldo;
@@ -181,7 +191,7 @@ void CrearCuenta(struct cliente *clientes, int *numClientes) {
     clientes[*numClientes] = nuevaCuenta;
     (*numClientes)++;
     printf("Cuenta creada exitosamente para %s con ID #%d.\n", nuevaCuenta.Nombre, nuevaCuenta.NoCliente);
-    GuardarClientes(clientes, *numClientes); // Guardar después de crear cuenta
+    GuardarClientes(clientes, *numClientes); 
 }
 
 void ConsultarMovimientos(struct cliente cliente) {
@@ -221,7 +231,7 @@ int main() {
         {125, 1030.00, "Luis", 8721, {0}, 0}
     };
 
-    int Accion, IDdeposito, IDlogin, Niplogin, Consultalogin;
+    int Accion, IDdeposito;
     int numClientes = 3;
 
     printf("\n----- Cajero Automatico -----\n");
