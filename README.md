@@ -143,5 +143,3 @@ El programa cuenta con 6 Funciones principales las cuales son las siguientes:
 
 
 
-
-es![Descripción de la imagen](Imagenes/a.png)
