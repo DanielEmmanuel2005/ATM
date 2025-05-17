@@ -30,17 +30,17 @@ Al ejecutar el código se mostrará un texto con el nombre del programa junto al
 Al seleccionar 1 aparecerá “Introduce ID” donde deberás escribir en NoCliente si este existe pedirá el NIP para comprobar que es tu cuenta, en caso de que el NoCliente y NIP sean incorrectos se regresará al menú principal.
 Al ser correcto tanto el NoCliente y el NIP se presentará un nuevo menú con las siguientes opciones:
 
-1.Consultar Saldo:
+* Consultar Saldo:
 Al seleccionar 1 se mostrará su ID de usuario junto a su nombre y el saldo actual de      
              la cuenta, y regresa al menú.
 
-2.Consultar Movimientos:
+* Consultar Movimientos:
 Al seleccionar 2 si usted no a hecho movimientos previamente se escribira en la pantalla “No hay movimientos registros”, pero si previamente has hecho algún movimiento se mostrarán los últimos 10 movimientos hechos (positivos si son depósitos y negativo si son retiro.Una vez completado cualquier de los dos casos previos se regresará al menú anterior.
 
-3.Retiro:
+* Retiro:
 Al seleccionar 3 se pedirá la cantidad a retirar y se valida en dado caso de que su saldo sea insuficiente se pedirá una confirmación para seguir con el retiro si es ‘S’ se le restara y quedará el saldo en negativo y si es ‘N’ se cancelara y regresará directamente al menú.Si tiene el saldo suficiente segura con el retiro y regresa al menú.	
 
-4.Salir:
+* Salir:
 Al seleccionar 4 regresarás al menú principal junto a las primeras opcionesmostradas.
 
 **2.-Buscar cliente:**
