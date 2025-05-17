@@ -13,6 +13,7 @@ Con esto Github te notificara que encontró un usuario con ese nombre.
 ![Descripción de la imagen](https://github.com/DanielEmmanuel2005/ATM/blob/main/imagen_2025-05-17_102556317.png?raw=true)
 ![Descripción de la imagen](https://github.com/DanielEmmanuel2005/ATM/blob/main/imagen_2025-05-17_102822314.png?raw=true)
 4. En la parte inferior habrá un apartado llamado **“Contribution activity”**, en el que buscaras el mes de mayo de el 2025.
+![image](https://github.com/user-attachments/assets/7bcad028-2af1-41af-92c2-a24d91659a2e)
 
 5. Veras que ahí hubo actividad en un enlace con el nombre de **“DanielEmmanuel2005/ATM”**, haz click sobre ese nombre.
 
