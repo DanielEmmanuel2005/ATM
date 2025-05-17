@@ -85,38 +85,40 @@ Caracteristicas de la struct cliente.
 ## Acciones del programa (Funciones del Cajero Automatico)
 El programa cuenta con 6 Funciones las cuales son las siguientes:
 1. Registrar_Cliente(struct Cliente *cliente, int numeroCliente)
+   ```c
+   void 
 	* Descripción: Registra un nuevo cliente solicitando nombre, apellido, NIP y saldo inicial.
 	* Retorno: No retorna nada.
 	* Parámetros:
 	    * cliente: Puntero a un struct Cliente.
 	    * numeroCliente: Número entero que se asigna como ID al nuevo cliente.
 
-2. Busqueda(struct Cliente *clientes)
+3. Busqueda(struct Cliente *clientes)
 	* Descripción: Permite buscar a un cliente por nombre y devuelve su número de cliente.
 	* Retorno: Imprime el número del cliente si se encuentra, o un mensaje de error si no.
 	* Parámetros:
 	    * clientes: Arreglo de structs Cliente.
 
-3. Depositar(struct Cliente *clientes, int NumClientes)
+4. Depositar(struct Cliente *clientes, int NumClientes)
 	* Descripción: Permite depositar una cantidad en la cuenta de un cliente.
 	* Retorno: Actualiza el saldo del cliente y almacena el movimiento.
 	* Parámetros:
 	    * clientes: Arreglo de structs Cliente.
 	    * NumClientes: Número total de clientes registrados.
 
-4. Consulta(struct Cliente *cliente)
+5. Consulta(struct Cliente *cliente)
 	* Descripción: Permite consultar el saldo o ver el historial de movimientos de una cuenta.
 	* Retorno: Imprime el saldo o los movimientos.
 	* Parámetros:
 	    * cliente: Puntero a un struct Cliente.
 
-5. Retiro(struct Cliente *cliente)
+6. Retiro(struct Cliente *cliente)
 	* Descripción: Permite retirar dinero de una cuenta, validando que haya saldo suficiente. Pide confirmación antes de hacer el retiro.
 	* Retorno: Actualiza el saldo y registra el movimiento si es aprobado.
 	* Parámetros:
 	    * cliente: Puntero a un struct Cliente.
 
-6. IniciarSesion(struct Cliente *clientes, int numClientes)
+7. IniciarSesion(struct Cliente *clientes, int numClientes)
 	* Descripción: Verifica que el número de cliente y el NIP sean correctos. Permite al usuario consultar o retirar dinero.
 	* Retorno: Ejecuta un menú exclusivo para la cuenta autenticada.
 	* Parámetros:
