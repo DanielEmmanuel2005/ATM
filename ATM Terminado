@@ -187,8 +187,7 @@ void CrearCuenta(struct cliente *clientes, int *numClientes) {
 
     clientes[*numClientes] = nuevaCuenta;
     (*numClientes)++;
-    printf("Cuenta creada exitosamente para %s con ID #%d.\n", nuevaCuenta.Nombre, nuevaCuenta.NoCliente);
-    GuardarClientes(clientes, *numClientes); 
+    printf("Cuenta creada exitosamente para %s con ID #%d.\n", nuevaCuenta.Nombre, nuevaCuenta.NoCliente); 
 }
 
 void ConsultarMovimientos(struct cliente cliente) {
