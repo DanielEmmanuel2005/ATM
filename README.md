@@ -62,7 +62,7 @@ Al seleccionar 6  se acabará el programa y se cerrará.
 La siguiente estructura representa la información de un cliente del cajero automático.
 
 ```c
-struct Cliente 
+struct cliente 
 {
     char Nombre[40];           // Cadena de caracteres: nombre del cliente
     char Apellido[40];         // Cadena de caracteres: apellido del cliente
@@ -82,44 +82,62 @@ Caracteristicas de la struct cliente.
 * Numero del cliente **ID** : Este es un tipo de dato entero el cual es el ID que se le asigna al crear la cuenta.
 
 ## Acciones del programa (Funciones del Cajero Automatico)
-El programa cuenta con 6 Funciones las cuales son las siguientes:
-1. Registrar_Cliente(struct Cliente *cliente, int numeroCliente)
-   ```c
-   void 
-	* Descripción: Registra un nuevo cliente solicitando nombre, apellido, NIP y saldo inicial.
-	* Retorno: No retorna nada.
+El programa cuenta con 6 Funciones principales las cuales son las siguientes:
+1. CrearCuenta(struct cliente *cliente, int *numCliente)
+	```c
+	void CrearCuenta(struct cliente *clientes, int *numClientes);
+	```
+	* Descripción: Funcion sin retorno de valor que registra un nuevo cliente solicitando nombre, apellido, NIP y saldo inicial.
 	* Parámetros:
-	    * cliente: Puntero a un struct Cliente.
-	    * numeroCliente: Número entero que se asigna como ID al nuevo cliente.
+	    * **clientes**: Puntero a un struct cliente.
+	    * **numeroCliente**: Puntero a entero que indica el número actual de clientes y se actualiza al agregar uno nuevo.
 
-3. Busqueda(struct Cliente *clientes)
-	* Descripción: Permite buscar a un cliente por nombre y devuelve su número de cliente.
-	* Retorno: Imprime el número del cliente si se encuentra, o un mensaje de error si no.
+2. Busqueda(struct cliente *clientes, int tamaño)
+	```c
+	void Busqueda(struct cliente *clientes, int tamano);
+	```
+	* Descripción: Funcion sin retorno de valor que permite buscar a un cliente por nombre y muetra su número de cliente.
 	* Parámetros:
-	    * clientes: Arreglo de structs Cliente.
+	    * **clientes**: Arreglo de structs cliente.
+		* **tamano**: Número total de clientes registrados.
 
-4. Depositar(struct Cliente *clientes, int NumClientes)
-	* Descripción: Permite depositar una cantidad en la cuenta de un cliente.
+3. Depositar(struct cliente *clientes, int NumClientes)
+	```c
+	float Depositar(struct cliente *clientes);
+	```
+	* Descripción: Permite depositar una cantidad en la cuenta del cliente pasado por referencia. Valida el depósito, actualiza saldo y registra el movimiento.
 	* Retorno: Actualiza el saldo del cliente y almacena el movimiento.
 	* Parámetros:
-	    * clientes: Arreglo de structs Cliente.
-	    * NumClientes: Número total de clientes registrados.
+	    * **clientes**: Arreglo de structs cliente.
 
-5. Consulta(struct Cliente *cliente)
-	* Descripción: Permite consultar el saldo o ver el historial de movimientos de una cuenta.
-	* Retorno: Imprime el saldo o los movimientos.
+4. ConsultarSaldo(struct cliente cliente)
+	```c
+	void ConsultarSaldo(struct cliente clientes);
+	```
+	* Descripción: Funcion sin retorno de valor que imprime el saldo actual del cliente.
 	* Parámetros:
-	    * cliente: Puntero a un struct Cliente.
+	    * **clientes**: Copia de la estructura cliente para consultar su saldo.
 
-6. Retiro(struct Cliente *cliente)
-	* Descripción: Permite retirar dinero de una cuenta, validando que haya saldo suficiente. Pide confirmación antes de hacer el retiro.
-	* Retorno: Actualiza el saldo y registra el movimiento si es aprobado.
+5. Retiro(struct cliente *cliente)
+	```c
+	float Retirar(struct cliente *clientes);
+	```
+	* Descripción: Permite retirar dinero de la cuenta del cliente, validando que la cantidad sea positiva y preguntando confirmación si el saldo es insuficiente. Actualiza saldo y registra el movimiento..
+	* Retorno: Retorna el saldo actualizado.
 	* Parámetros:
-	    * cliente: Puntero a un struct Cliente.
+	    * **clientes**: Puntero a un struct cliente.
 
-7. IniciarSesion(struct Cliente *clientes, int numClientes)
-	* Descripción: Verifica que el número de cliente y el NIP sean correctos. Permite al usuario consultar o retirar dinero.
-	* Retorno: Ejecuta un menú exclusivo para la cuenta autenticada.
+6. IniciarSesion(struct cliente *clientes, int numClientes)
+	```c
+	void IniciarSesion(struct cliente *clientes, int numClientes);
+	```
+	* Descripción: Solicita ID y NIP para autenticar al cliente. Si los datos son correctos, permite consultar saldo, movimientos o hacer retiros mediante un menú.
+	* Retorno: No retorna valor, pero ejecuta acciones sobre la cuenta autenticada.
 	* Parámetros:
-	    * clientes: Arreglo de structs Cliente.
-	    * numClientes: Número total de clientes registrados.
+	    * **clientes**: Puntero a un arreglo de estructuras cliente.
+	    * **numClientes**: Número total de clientes registrados.
+
+
+
+
+es![Descripción de la imagen](Imagenes/a.png)
