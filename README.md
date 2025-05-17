@@ -26,7 +26,7 @@ Con esto Github te notificara que encontró un usuario con ese nombre.
 
 Al ejecutar el código se mostrará un texto con el nombre del programa junto al menú principal donde puedes seleccionar las siguientes opciones:
 
-*1.-Login : *
+**1.-Login :**
 Al seleccionar 1 aparecerá “Introduce ID” donde deberás escribir en NoCliente si este existe pedirá el NIP para comprobar que es tu cuenta, en caso de que el NoCliente y NIP sean incorrectos se regresará al menú principal.
 Al ser correcto tanto el NoCliente y el NIP se presentará un nuevo menú con las siguientes opciones:
 
@@ -46,19 +46,18 @@ Al seleccionar 4 regresarás al menú principal junto a las primeras opcionesmos
 *2.-Buscar cliente:*
 Al seleccionar 2 pedirá el nombre de dueño de la cuenta si este no está registrado mostrará “No existe este usuario.” y regresarás al menú principal, pero sí en nombre sí está registrado se mostrará en Nocliente de ese usuario y regresará al menú principal.
 
-*3.-Depósito:*
+**3.-Depósito:**
 Al seleccionar 3 pedira el ID o NoCliente de la cuenta al que quieras depositar si este usuario no existe regresarás al menú. Si este existe pedirá la cantidad a depositar a la cuenta y se le sumará y regresas al menú principal. 
 
-*4.-Crear Cuenta:*
+**4.-Crear Cuenta:**
 Al seleccionar 4 y si existen menos de 100 usuarios se pedirá los datos de la nueva cuenta (nombre, Saldo, Nip) y una vez obtenidos se le asignará un número de cuenta a partir del número 125 y regresas al menú principal.
 Si existen 100 usuarios no podrás registrar un nuevo usuario y regresarás al menú principal.
 
-*5.-Guardar:*
+**5.-Guardar:**
 
-*6.-Salir:*
+**6.-Salir:**
 Al seleccionar 6  se acabará el programa y se cerrará.
 
-Explicación/Descripción
 ## Estructura del Cliente 
 La siguiente estructura representa la información de un cliente del cajero automático.
 
