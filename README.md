@@ -8,7 +8,7 @@ Pasos para la instalación:
 
 1. En la esquina superior derecha de la pagina principal de Github, encontraras varios botones, entre ellos encontraras la barra de búsqueda, haces click sobre ella y deberas escribir **“OmarMendez245”** para luego apretar la tecla “enter”.
 Con esto Github te notificara que encontró un usuario con ese nombre.
-![Descripción de la imagen](Imagenes/Busqueda Github.PNG)
+![Descripción de la imagen]([Imagenes/Busqueda Github.PNG](https://github.com/DanielEmmanuel2005/ATM/blob/e1dd93aec12b2c25a6524e72989d6a8e61197c44/imagen_2025-05-17_095754955.png))
 2. Harás click sobre el aviso, lo que te mostrara el usuario **“OmarMendez245”**, haces click sobre el y se te mostrara su pagina de usuario.
 
 3. En la parte inferior habrá un apartado llamado **“Contribution activity”**, en el que buscaras el mes de mayo de el 2025.
