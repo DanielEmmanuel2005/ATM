@@ -8,16 +8,16 @@ Pasos para la instalación:
 
 1. En la esquina superior derecha de la pagina principal de Github, encontraras varios botones, entre ellos encontraras la barra de búsqueda, haces click sobre ella y deberas escribir **“OmarMendez245”** para luego apretar la tecla “enter”.
 Con esto Github te notificara que encontró un usuario con ese nombre.
-![Con titulo](pictures/Segundo paso Instalacion.png "titulo")
+![Descripción de la imagen](Imagenes/Busqueda Github.PNG)
 2. Harás click sobre el aviso, lo que te mostrara el usuario **“OmarMendez245”**, haces click sobre el y se te mostrara su pagina de usuario.
 
 3. En la parte inferior habrá un apartado llamado **“Contribution activity”**, en el que buscaras el mes de mayo de el 2025.
 
 4. Veras que ahí hubo actividad en un enlace con el nombre de **“DanielEmmanuel2005/ATM”**, haz click sobre ese nombre.
 
-5. Encontraras una pagina con una lista de nombres en la parte central de la pantalla, ahí buscaras **“ATM Terminado”** y **"ATM.h"**, haces click sobre el y te mostrara todo nuestro código.
+5. Encontraras una pagina con una lista de nombres en la parte central de la pantalla, ahí buscaras **“ATM Terminado”** y **"ATM.h"**, haces click sobre ellos y te mostraran todo nuestro código.
 
-6. Crearas un nuevo proyecto en tu compilador de C y pegaras nuestro código.
+6. Crearas un nuevo proyecto en tu compilador de C y pegaras nuestros códigos.
 
 7. Haras click en compilar y luego correras el programa.
 
