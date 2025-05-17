@@ -53,7 +53,42 @@ void GuardarClientes(struct cliente *clientes, int numClientes) {
     fclose(archivo);
     printf("Datos de clientes guardados exitosamente en clientes.txt\n");
 }
+void IniciarSesion(struct cliente *clientes, int numClientes) {
+    int IDlogin, Niplogin, Consultalogin;
+    printf("Introduce ID: ");
+    scanf("%d", &IDlogin);
+    int loginEncontrado = 0;
+    for (int i = 0; i < numClientes; i++) {
+        if (IDlogin == clientes[i].NoCliente) {
+            printf("Introduce NIP: ");
+            scanf("%d", &Niplogin);
+            if (Niplogin == clientes[i].NIP) {
+                loginEncontrado = 1;
+                do {
+                    printf("\n\n¿Que deseas hacer?\n1.-Consultar Saldo\n2.-Consultar Movimientos\n3.-Retiro\n4.-Salir\n");
+                    scanf("%d", &Consultalogin);
 
+                    switch (Consultalogin) {
+                        case 1:
+                            ConsultarSaldo(clientes[i]);
+                            break;
+                        case 2:
+                            ConsultarMovimientos(clientes[i]);
+                            break;
+                        case 3:
+                            Retirar(&clientes[i]);
+                            break;
+                        case 4:
+                            break;
+                    }
+                } while (Consultalogin != 4);
+            }
+        }
+    }
+    if (!loginEncontrado) {
+        printf("No existe este usuario.\n");
+    }
+}
 void Busqueda(struct cliente *clientes, int tamano) {
     char nombre[40];
     printf("Introduce tu nombre: ");
@@ -197,39 +232,7 @@ int main() {
 
         switch (Accion) {
             case 1:
-                printf("Introduce ID: ");
-                scanf("%d", &IDlogin);
-                int loginEncontrado = 0;
-                for (int i = 0; i < numClientes; i++) {
-                    if (IDlogin == clientes[i].NoCliente) {
-                        printf("Introduce NIP: ");
-                        scanf("%d", &Niplogin);
-                        if (Niplogin == clientes[i].NIP) {
-                            loginEncontrado = 1;
-                            do {
-                                printf("\n\n¿Que deseas hacer?\n1.-Consultar Saldo\n2.-Consultar Movimientos\n3.-Retiro\n4.-Salir\n");
-                                scanf("%d", &Consultalogin);
-
-                                switch (Consultalogin) {
-                                    case 1:
-                                        ConsultarSaldo(clientes[i]);
-                                        break;
-                                    case 2:
-                                        ConsultarMovimientos(clientes[i]);
-                                        break;
-                                    case 3:
-                                        Retirar(&clientes[i]);
-                                        break;
-                                    case 4:
-                                        break;
-                                }
-                            } while (Consultalogin != 4);
-                        }
-                    }
-                }
-                if (!loginEncontrado) {
-                    printf("No existe este usuario.\n");
-                }
+                IniciarSesion(clientes, numClientes);
                 break;
 
             case 2:
