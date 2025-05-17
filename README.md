@@ -43,7 +43,7 @@ Al seleccionar 3 se pedirá la cantidad a retirar y se valida en dado caso de qu
 4.Salir:
 Al seleccionar 4 regresarás al menú principal junto a las primeras opcionesmostradas.
 
-*2.-Buscar cliente:*
+**2.-Buscar cliente:**
 Al seleccionar 2 pedirá el nombre de dueño de la cuenta si este no está registrado mostrará “No existe este usuario.” y regresarás al menú principal, pero sí en nombre sí está registrado se mostrará en Nocliente de ese usuario y regresará al menú principal.
 
 **3.-Depósito:**
