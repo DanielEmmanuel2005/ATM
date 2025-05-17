@@ -38,7 +38,7 @@ Al ser correcto tanto el NoCliente y el NIP se presentará un nuevo menú con la
 Al seleccionar 1 se mostrará su ID de usuario junto a su nombre y el saldo actual de      
              la cuenta, y regresa al menú.
 
-![Descripción de la imagen](Imagenes/Consultar saldo.JPG)
+![Descripción de la imagen](Imagenes/Consultarsaldo.JPG)
 
 * Consultar Movimientos:
 Al seleccionar 2 si usted no a hecho movimientos previamente se escribira en la pantalla “No hay movimientos registros”, pero si previamente has hecho algún movimiento se mostrarán los últimos 10 movimientos hechos (positivos si son depósitos y negativo si son retiro.Una vez completado cualquier de los dos casos previos se regresará al menú anterior.
