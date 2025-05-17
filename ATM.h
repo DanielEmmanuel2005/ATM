@@ -141,7 +141,6 @@ float Depositar(struct cliente *clientes) {
         agregarMovimiento(clientes, cantidad);
         (*clientes).Saldo += cantidad;
         printf("Depósito exitoso. Nuevo saldo: %.2f\n", (*clientes).Saldo);
-        GuardarClientes(clientes, 1);
     }
     return (*clientes).Saldo;
 }
@@ -159,7 +158,6 @@ float Retirar(struct cliente *clientes) {
                 agregarMovimiento(clientes, -cantidad);
                 (*clientes).Saldo -= cantidad;
                 printf("\nRetiro exitoso. Nuevo saldo: %.2f\n", (*clientes).Saldo);
-                GuardarClientes(clientes, 1); 
             } else {
                 printf("\nRetiro cancelado\n");
             }
@@ -167,7 +165,6 @@ float Retirar(struct cliente *clientes) {
             agregarMovimiento(clientes, -cantidad);
             (*clientes).Saldo -= cantidad;
             printf("Retiro exitoso. Nuevo saldo: %.2f\n", (*clientes).Saldo);
-            GuardarClientes(clientes, 1); 
         }
     }
     return (*clientes).Saldo;
@@ -196,7 +193,6 @@ void CrearCuenta(struct cliente *clientes, int *numClientes) {
     clientes[*numClientes] = nuevaCuenta;
     (*numClientes)++;
     printf("Cuenta creada exitosamente para %s con ID #%d.\n", nuevaCuenta.Nombre, nuevaCuenta.NoCliente);
-    GuardarClientes(clientes, *numClientes); 
 }
 
 void ConsultarMovimientos(struct cliente cliente) {
