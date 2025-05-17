@@ -54,6 +54,8 @@ Al seleccionar 4 y si existen menos de 100 usuarios se pedirá los datos de la n
 Si existen 100 usuarios no podrás registrar un nuevo usuario y regresarás al menú principal.
 
 **5.-Guardar:**
+Al seleccionar la opción 5, el programa pedirá un usuario y contraseña de administrador para poder acceder a esta función. Si el usuario o contraseña son incorrectos, mostrará un mensaje indicando que el acceso fue denegado y regresará automáticamente al menú principal sin realizar ninguna acción.
+Si las credenciales de administrador son correctas, el sistema creará un archivo llamado clientes.txt donde guardará toda la información de los clientes registrados hasta ese momento, incluyendo su número de cliente, nombre, saldo, NIP y movimientos recientes. Una vez completado el guardado de datos, el programa mostrará un mensaje de confirmación y volverá al menú principal para que el usuario pueda seguir realizando otras operaciones.
 
 **6.-Salir:**
 Al seleccionar 6  se acabará el programa y se cerrará.
