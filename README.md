@@ -16,7 +16,7 @@ Con esto Github te notificara que encontró un usuario con ese nombre.
 
 5. Veras que ahí hubo actividad en un enlace con el nombre de **“DanielEmmanuel2005/ATM”**, haz click sobre ese nombre.
 
-6. Encontraras una pagina con una lista de nombres en la parte central de la pantalla, ahí buscaras **“ATM Terminado”**, haces click sobre el y te mostrara todo nuestro código.
+6. Encontraras una pagina con una lista de nombres en la parte central de la pantalla, ahí buscaras **“ATM Terminado”** y **"ATM.h"**, haces click sobre el y te mostrara todo nuestro código.
 
 7. Crearas un nuevo proyecto en tu compilador de C y pegaras nuestro código.
 
