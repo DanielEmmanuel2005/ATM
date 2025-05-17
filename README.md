@@ -12,16 +12,17 @@ Con esto Github te notificara que encontró un usuario con ese nombre.
 2. Harás click sobre el aviso, lo que te mostrara el usuario **“OmarMendez245”**, haces click sobre el y se te mostrara su pagina de usuario.
 ![Descripción de la imagen](https://github.com/DanielEmmanuel2005/ATM/blob/main/imagen_2025-05-17_102556317.png?raw=true)
 ![Descripción de la imagen](https://github.com/DanielEmmanuel2005/ATM/blob/main/imagen_2025-05-17_102822314.png?raw=true)
-4. En la parte inferior habrá un apartado llamado **“Contribution activity”**, en el que buscaras el mes de mayo de el 2025.
+3. En la parte inferior habrá un apartado llamado **“Contribution activity”**, en el que buscaras el mes de mayo de el 2025.
 ![image](https://github.com/user-attachments/assets/7bcad028-2af1-41af-92c2-a24d91659a2e)
 
-5. Veras que ahí hubo actividad en un enlace con el nombre de **“DanielEmmanuel2005/ATM”**, haz click sobre ese nombre.
+4. Veras que ahí hubo actividad en un enlace con el nombre de **“DanielEmmanuel2005/ATM”**, haz click sobre ese nombre.
 
-6. Encontraras una pagina con una lista de nombres en la parte central de la pantalla, ahí buscaras **“ATM Terminado”** y **"ATM.h"**, haces click sobre ellos y te mostraran todo nuestro código.
+5. Encontraras una pagina con una lista de nombres en la parte central de la pantalla, ahí buscaras **“ATM Terminado”** y **"ATM.h"**, haces click sobre ellos y te mostraran todo nuestro código.
+![image](https://github.com/user-attachments/assets/79742a78-317d-49c5-9ad7-1ddaf8b92eea)
 
-7. Crearas un nuevo proyecto en tu compilador de C y pegaras nuestros códigos.
+6. Crearas un nuevo proyecto en tu compilador de C y pegaras nuestros códigos.
 
-8. Haras click en compilar y luego correras el programa.
+7. Haras click en compilar y luego correras el programa.
 
 # Guía de usuario
 
